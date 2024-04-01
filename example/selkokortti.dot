@@ -1,0 +1,62 @@
+strict digraph "" {
+	create_deck -> write_to_file;
+	create_deck -> Package;
+	add_flashcards_to_deck -> add_note;
+	add_flashcards_to_deck -> Note;
+	find_date_range	[color=red,
+		fontcolor=red];
+	find_date_range -> int	[color=red];
+	find_date_range -> datetime	[color=red];
+	find_date_range -> split	[color=red];
+	find_date_range -> walk	[color=red];
+	find_date_range -> strftime	[color=red];
+	find_date_range -> len	[color=red];
+	parse_request_json -> print;
+	parse_request_json -> load;
+	parse_request_json -> open;
+	parse_request_json -> get;
+	parse_response_json -> print;
+	parse_response_json -> load;
+	parse_response_json -> open;
+	parse_response_json -> get;
+	zip_translations -> len;
+	zip_translations -> zip;
+	zip_translations -> list;
+	zip_translations -> ValueError;
+	filter_translations -> startswith;
+	filter_translations -> append;
+	process_translations_for_date	[color=red,
+		fontcolor=red];
+	process_translations_for_date -> split	[color=red];
+	process_translations_for_date -> parse_request_json	[color=red];
+	process_translations_for_date -> parse_response_json	[color=red];
+	process_translations_for_date -> zip_translations	[color=red];
+	process_translations_for_date -> filter_translations	[color=red];
+	generate_flashcards_for_date -> add_flashcards_to_deck;
+	generate_flashcards_for_date -> process_translations_for_date;
+	generate_flashcards_for_date -> Exit;
+	generate_flashcards_for_date -> echo;
+	generate_flashcards	[color=red,
+		fontcolor=red];
+	generate_flashcards -> create_deck	[color=red];
+	generate_flashcards -> strftime	[color=red];
+	generate_flashcards -> generate_flashcards_for_date	[color=red];
+	generate_flashcards -> timedelta	[color=red];
+	generate_flashcards -> strptime	[color=red];
+	today	[color=red,
+		fontcolor=red];
+	today -> strftime	[color=red];
+	today -> generate_flashcards	[color=red];
+	today -> command	[color=red];
+	today -> Option	[color=red];
+	today -> now	[color=red];
+	everything -> find_date_range;
+	everything -> generate_flashcards;
+	everything -> command;
+	everything -> Option;
+	range -> generate_flashcards;
+	range -> command;
+	range -> Option;
+	range -> Argument;
+}
+
