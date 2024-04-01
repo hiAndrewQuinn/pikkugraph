@@ -1,0 +1,33 @@
+digraph "" {
+	__init__ -> __init__;
+	__init__ -> super;
+	visit_FunctionDef -> set;
+	visit_FunctionDef -> generic_visit;
+	visit_Call -> generic_visit;
+	visit_Call -> add;
+	visit_Call -> hasattr;
+	analyze_file	[color=red,
+		fontcolor=red];
+	analyze_file -> edges	[color=red];
+	analyze_file -> "DiGraph"	[color=red];
+	analyze_file -> get_edge	[color=red];
+	analyze_file -> to_agraph	[color=red];
+	analyze_file -> add_edge	[color=red];
+	analyze_file -> open	[color=red];
+	analyze_file -> get_node	[color=red];
+	analyze_file -> print	[color=red];
+	analyze_file -> to_string	[color=red];
+	analyze_file -> FunctionCallVisitor	[color=red];
+	analyze_file -> parse	[color=red];
+	analyze_file -> command	[color=red];
+	analyze_file -> argument	[color=red];
+	analyze_file -> Path	[color=red];
+	analyze_file -> nodes	[color=red];
+	analyze_file -> echo	[color=red];
+	analyze_file -> out_degree	[color=red];
+	analyze_file -> read	[color=red];
+	analyze_file -> visit	[color=red];
+	analyze_file -> items	[color=red];
+	analyze_file -> out_edges	[color=red];
+}
+

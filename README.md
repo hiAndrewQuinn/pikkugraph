@@ -12,7 +12,9 @@ will print `example/selkokortti.dot` to stdout, and `example/selkokortti.dot` wi
 
 .
 
-The red color means there are more than 4 outgoing arrows, [which might be a good candidate for refactoring](https://hiandrewquinn.github.io/til-site/posts/the-rule-of-four/).
+The red color means there are more than 4 outgoing arrows, [which might be a good candidate for refactoring](https://hiandrewquinn.github.io/til-site/posts/the-rule-of-four/). See for example our very own script, which is awful:
+
+![main.py dependency diagram](main.png)
 
 ## Motivation
 
